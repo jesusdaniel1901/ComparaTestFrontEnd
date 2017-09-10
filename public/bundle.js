@@ -122,7 +122,6 @@
 	        method: 'POST',
 	        url: 'http://localhost:3000/v1/dealer/deck',
 	        success: function success(data, textStatus, request) {
-	          console.log(data.token);
 	          localStorage.setItem('dealder-token', data.token);
 	          alert('cards shuffleds sucessfully');
 	        },
@@ -176,7 +175,6 @@
 	      this.setState({
 	        cardsPlayer1: cards
 	      });
-	      console.log(this.state.cardsPlayer1);
 	    }
 	  }, {
 	    key: '_setCardsPlayer2',
@@ -204,7 +202,7 @@
 	        _react2.default.createElement(
 	          'h2',
 	          { className: 'title' },
-	          'Pocker Game'
+	          'Poker Game'
 	        ),
 	        _react2.default.createElement(
 	          'button',

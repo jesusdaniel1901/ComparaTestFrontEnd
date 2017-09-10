@@ -19,6 +19,7 @@ export default class Hand extends React.Component{
   }  
   
   _onClickGetHand(event){
+    
     event.preventDefault();
     if(localStorage.getItem('dealder-token') == null){
       alert('please shuffleds the cards first')
@@ -44,7 +45,6 @@ export default class Hand extends React.Component{
         <button className="btn btn-default" onClick={this._onClickGetHand}>Get hand</button>
         {cardsLabels}
       </div>
-      
     )
   }
 };

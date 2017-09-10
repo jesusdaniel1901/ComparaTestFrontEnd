@@ -24,7 +24,6 @@ export default class Board extends React.Component{
       method: 'POST',
       url: `http://localhost:3000/v1/dealer/deck`,
       success: (data, textStatus, request) => {
-        console.log(data.token);
         localStorage.setItem('dealder-token', data.token);
         alert('cards shuffleds sucessfully');
       },
@@ -89,7 +88,6 @@ export default class Board extends React.Component{
     this.setState({
       cardsPlayer1: cards
     }) 
-    console.log(this.state.cardsPlayer1);
   }
   _setCardsPlayer2(cards){
     this.setState({
@@ -109,7 +107,7 @@ export default class Board extends React.Component{
   render(){
     return(
       <div>
-        <h2 className="title">Pocker Game</h2>
+        <h2 className="title">Poker Game</h2>
         <button className="btn btn-default deck-button" onClick={this._onClickShufflesCards}>Shuffles cards</button>
         <div className="row">
           <div className="col-md-6">
